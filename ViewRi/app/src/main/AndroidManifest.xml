@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jiyun.viewri">
+    <uses-sdk android:minSdkVersion="4"/>
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:label="@string/app_name" android:name=".CalendarActivity">
+            <intent-filter> <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".ScheduleView"/>
+        <activity android:label="@string/app_name" android:name=".ScheduleTypeView"/>
+        <activity android:label="@string/app_name" android:name=".ScheduleInfoView"/>
+        <activity android:label="@string/app_name" android:name=".ScheduleAll"/>
+        <activity android:label="@string/app_name" android:name=".CalendarConvert"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a110.myprcearray.MainActivity">
+
+    <Button
+
+        android:id="@+id/start"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:onClick="start"
+
+        android:text="走起" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stop"
+        android:text="停止" />
+    <Button
+        android:id="@+id/startfor0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startFor0"
+        android:text="从头开始" />
+
+    <com.example.a110.myprcearray.PrceArray
+        android:id="@+id/test"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#339320"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+
+        android:text="这才是真正的文字跑马灯效果这才是真正的字跑马灯效果这才是真正的"
+        android:textColor="#000000"
+        android:textSize="20dp" >
+    </com.example.a110.myprcearray.PrceArray>
+</LinearLayout>
+
