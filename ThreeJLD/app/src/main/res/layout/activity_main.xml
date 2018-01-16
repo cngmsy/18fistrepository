@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wangxu.threejld.MainActivity">
+
+    <Spinner
+        android:id="@+id/spin_province"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spin_city"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spin_county"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
