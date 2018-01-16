@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.administrator.lunpandemoone.MainActivity">
+
+    <com.example.administrator.lunpandemoone.LuckyPan
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/id_luckypan"
+        android:layout_centerInParent="true"
+        android:padding="30dp"
+        />
+    <ImageView
+        android:id="@+id/id_start_btn"
+        android:src="@drawable/start"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
