@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <!--&lt;!&ndash;//valuse&ndash;&gt;-->
+    <!--<style name="TranslucentTheme" parent="AppTheme">-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash;// values-v19。v19 开始有 android:windowTranslucentStatus 这个属性&ndash;&gt;-->
+    <!--<style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--<item name="android:windowTranslucentStatus">true</item>-->
+    <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    <!--</style>-->
+
+ <!--values-v21。5.0 以上提供了 setStatusBarColor()  方法设置状态栏颜色。-->
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">false</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+    </style>
+
+</resources>
