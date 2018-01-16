@@ -4,9 +4,12 @@
 
 
 
-#实现横屏的核心代码是
+#实现横屏的核心代码是 
 
-###步骤一:
+
+###步骤一: 
+
+```
   private void drawRect(Canvas canvas) {
         canvas.drawLine(strWidth,-strWidth,strWidth,-530+2,paint);//+2是画笔的宽度
         canvas.drawLine(strWidth,-530+2,430-2,-530+2,paint);
@@ -90,7 +93,7 @@
         this.mPoints = points;
 //        invalidate();
     }
-
+```
  ###步骤二:
 
  在Activity中调用
