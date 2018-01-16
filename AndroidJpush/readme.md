@@ -1,7 +1,6 @@
 #极光推送
 效果图gif
-![](hengxiang.gif)
-![](shuxiang.gif)
+![](jpush.gif)
 
 
 ###一、配置：https://docs.jiguang.cn/jpush/client/Android/android_sdk/
