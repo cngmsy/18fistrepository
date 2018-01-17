@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="#ededed"
+    android:gravity="center_vertical"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="搜索框"
+        android:background="@drawable/em_button_normal_shape"
+        android:layout_marginLeft="8dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="27dp"
+        android:drawableLeft="@mipmap/ease_search_bar_icon_normal"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_marginRight="10dp"
+
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:src="@drawable/ease_search_clear"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+        android:paddingBottom="10dp"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#00acff"
+        >
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/em_back"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/search_tv"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="查找"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:layout_toRightOf="@+id/iv_back"
+            android:layout_toLeftOf="@+id/search_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="添加好友"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:id="@+id/tv_serach"
+            />
+        
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edit_input"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:padding="10dp"
+        android:background="@drawable/em_button_normal_shape"
+        android:hint="用户名"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ease_default_avatar"
+            android:padding="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="ggg"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/em_button_bg"
+            android:text="添加"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

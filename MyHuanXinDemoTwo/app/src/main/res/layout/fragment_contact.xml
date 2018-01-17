@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--引入通用的标题栏布局-->
+    <include layout="@layout/common_title"/>
+    <!--&lt;!&ndash;引入搜索框布局&ndash;&gt;-->
+    <include layout="@layout/search_bar"/>
+
+
+    <!--为这个布局添加ListView控件-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/contact_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+        <!--<com.lanou.huanxin.view.SideBar-->
+            <!--android:id="@+id/id_sidebar"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+
+    </RelativeLayout>
+
+
+</LinearLayout>
