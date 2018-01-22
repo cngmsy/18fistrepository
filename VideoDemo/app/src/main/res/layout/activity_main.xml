@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context="demo.example.com.videodemo.MainActivity">
+
+    <demo.example.com.videodemo.view.FlingRecyclerView
+        android:id="@+id/rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <demo.example.com.videodemo.view.ContainerLayout
+        android:id="@+id/fl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1"
+        android:visibility="gone">
+
+    </demo.example.com.videodemo.view.ContainerLayout>
+
+    <demo.example.com.videodemo.view.ContainerLayout
+        android:id="@+id/fl_translation_video"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"></demo.example.com.videodemo.view.ContainerLayout>
+
+    <ImageView
+        android:id="@+id/iv_close_video_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="45dp" />
+
+    <TextView
+        android:id="@+id/tv_video_carry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="即将播放下一个"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/full_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+</FrameLayout>
