@@ -23,13 +23,12 @@
 3、控件
    PathView
    
-   ```
-   app:pathColor="@color/colorAccent"
-        app:pathWidth="3dp"
-        app:svg="@raw/q" //SVG图
-		
-    
-   ```
+  ```
+  	app:pathColor="@color/colorAccent"
+        app:pathWidth="3dp"
+        app:svg="@raw/q" //SVG图	
+  ```
+ 
 https://www.online-convert.com/		矢量图生成器网站
 
 阿里矢量图库
