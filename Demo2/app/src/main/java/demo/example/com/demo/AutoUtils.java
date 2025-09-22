@@ -33,7 +33,6 @@ public class AutoUtils {
         int width = display.getWidth();
         int height = display.getHeight();
 
-
         if (hasStatusBar) {
             height -= getStatusBarHeight(act);
         }
@@ -41,8 +40,28 @@ public class AutoUtils {
         AutoUtils.displayWidth = width;
         AutoUtils.displayHeight = height;
 
-        AutoUtils.designWidth = designWidth;
-        AutoUtils.designHeight = designHeight;
+        // 根据实际屏幕尺寸动态调整设计基准
+        // 如果是横屏显示器(宽>高)，调整设计尺寸以匹配横屏比例
+        if (width > height) {
+            // 横屏模式：保持设计比例但调整为横屏
+            double designRatio = (double) designWidth / designHeight;
+            double displayRatio = (double) width / height;
+            
+            if (displayRatio > designRatio) {
+                // 显示器更宽，以高度为基准
+                AutoUtils.designWidth = (int)(designHeight * displayRatio);
+                AutoUtils.designHeight = designHeight;
+            } else {
+                // 显示器相对更高，以宽度为基准  
+                AutoUtils.designWidth = designWidth;
+                AutoUtils.designHeight = (int)(designWidth / displayRatio);
+            }
+        } else {
+            // 竖屏模式：使用原始设计尺寸
+            AutoUtils.designWidth = designWidth;
+            AutoUtils.designHeight = designHeight;
+        }
+
         // sqrt 一个非负实数的平方根     pow 算x的y次幂
         double displayDiagonal = Math.sqrt(Math.pow(AutoUtils.displayWidth, 2) + Math.pow(AutoUtils.displayHeight, 2));
         double designDiagonal = Math.sqrt(Math.pow(AutoUtils.designWidth, 2) + Math.pow(AutoUtils.designHeight, 2));
@@ -224,5 +243,60 @@ public class AutoUtils {
 
     public static float getDisplayTextSize(float designTextSize) {
         return (float) (AutoUtils.textPixelsRate * designTextSize);
+    }
+
+    /**
+     * 获取屏幕密度比例，用于更精确的适配
+     */
+    public static float getScreenDensityRatio(Activity activity) {
+        float density = activity.getResources().getDisplayMetrics().density;
+        return density;
+    }
+
+    /**
+     * 智能适配方法，根据屏幕密度和尺寸自动选择最佳适配策略
+     */
+    public static void smartSetSize(Activity act, boolean hasStatusBar, int designWidth, int designHeight) {
+        if (act == null || designWidth < 1 || designHeight < 1)
+            return;
+
+        Display display = act.getWindowManager().getDefaultDisplay();
+        int width = display.getWidth();
+        int height = display.getHeight();
+        
+        // 获取屏幕密度
+        float density = act.getResources().getDisplayMetrics().density;
+        
+        if (hasStatusBar) {
+            height -= getStatusBarHeight(act);
+        }
+
+        AutoUtils.displayWidth = width;
+        AutoUtils.displayHeight = height;
+
+        // 根据屏幕密度和尺寸智能调整设计基准
+        if (density > 2.0f) { // 高密度屏幕
+            // 对于高密度屏幕，适当放大设计基准
+            designWidth = (int)(designWidth * 1.2f);
+            designHeight = (int)(designHeight * 1.2f);
+        }
+
+        // 处理横屏和竖屏
+        if (width > height) {
+            // 横屏模式
+            double aspectRatio = (double) width / height;
+            AutoUtils.designWidth = (int)(designHeight * aspectRatio);
+            AutoUtils.designHeight = designHeight;
+        } else {
+            // 竖屏模式
+            AutoUtils.designWidth = designWidth;
+            AutoUtils.designHeight = designHeight;
+        }
+
+        // 计算文字缩放比例
+        double displayDiagonal = Math.sqrt(Math.pow(AutoUtils.displayWidth, 2) + Math.pow(AutoUtils.displayHeight, 2));
+        double designDiagonal = Math.sqrt(Math.pow(AutoUtils.designWidth, 2) + Math.pow(AutoUtils.designHeight, 2));
+
+        AutoUtils.textPixelsRate = displayDiagonal / designDiagonal;
     }
 }
