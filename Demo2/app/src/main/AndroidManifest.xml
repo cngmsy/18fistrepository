@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="demo.example.com.demo">
 
+    <!-- 添加屏幕支持声明 -->
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true"
+        android:resizeable="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +31,8 @@
         </meta-data>
         <meta-data android:name="design_height" android:value="1280">
         </meta-data>
+        <!-- 支持高分辨率显示 -->
+        <meta-data android:name="android.max_aspect" android:value="2.4" />
     </application>
 
 </manifest>

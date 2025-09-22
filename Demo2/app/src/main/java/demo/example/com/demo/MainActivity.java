@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AutoUtils.setSize(this, false, 720, 1280);//没有状态栏,设计尺寸的宽高
+        // 使用智能适配方法，自动处理不同屏幕尺寸和密度
+        AutoUtils.smartSetSize(this, false, 768, 1280);//智能适配各种屏幕
         setContentView(R.layout.activity_main);
         findViewById(R.id.button1).setOnClickListener(new View.OnClickListener(){
 
